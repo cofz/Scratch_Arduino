@@ -562,16 +562,17 @@
     //  ['-'],
     //  ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
     //  ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
-      ['-'],
+      ['-'], 
       //[' ', 'set pin %n %m.outputs', 'digitalWrite', 13, 'on'],
-      [' ', 'set pin %m.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
-      [' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
+      [' ', 'set output pin Digital %m.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
+      ['-'], // including space
+      [' ', 'set output pin Analog %m.analog_outputs to %n%', 'analogWrite', 5, 100], //changing
       ['-'],
-      ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 3, 'on'],
-      ['b', 'pin %n on?', 'digitalRead', 3],
+      ['h', 'when input pin Digital %m.digital_inputs is %m.outputs', 'whenDigitalRead', 3, 'on'], //changing
+      ['b', 'input pin Digital %m.digital_inputs on?', 'digitalRead', 3], //changing
       ['-'],
-      ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 0, '>', 50],
-      ['r', 'read analog %n', 'analogRead', 0],
+      ['h', 'when input Analog %m.analog_inputs %m.ops %n%', 'whenAnalogRead', 0, '>', 50], //changing
+      ['r', 'read input Analog %m.analog_inputs', 'analogRead', 0], //changing
       ['-'],
     //  ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
@@ -964,7 +965,11 @@
       outputs: ['on', 'off'],
       ops: ['>', '=', '<'],
       servos: ['servo A', 'servo B', 'servo C', 'servo D'],
-      digital_outputs: [11, 13] // INCLUDING THESE
+      digital_outputs: [11, 13], // INCLUDING THESE
+      analog_outputs: [5, 6, 9], // INCLUDING THESE
+      digital_inputs: [3], // INCLUDING THESE
+      analog_inputs: [0, 1, 2, 3] // INCLUDING THESE
+      
     },
     de: {
       buttons: ['Taste A', 'Taste B', 'Taste C', 'Taste D'],
