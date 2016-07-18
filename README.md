@@ -1,4 +1,3 @@
 # Scratch_Arduino
-Arduino Extension based on Kreg's extension
+This experimental Scratch extension is a reduced version of the Arduino Scratch extension created by Kreg Hanning and David Mellis.
 
-Using only the blocks that are at the botton
