@@ -1,5 +1,5 @@
 /*
-* Reduced version of Arduino Experimental Extension
+* Reduced version of Arduino Experimental Extension for Scratch
 *
  *This program is free software: you can redistribute it and/or modify
  *it under the terms of the GNU General Public License as published by
@@ -563,13 +563,14 @@
     //  ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
     //  ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
       ['-'],
-      [' ', 'set pin %n %m.outputs', 'digitalWrite', 1, 'on'],
+      //[' ', 'set pin %n %m.outputs', 'digitalWrite', 13, 'on'],
+      [' ', 'set pin %m.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
       [' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
       ['-'],
-      ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 1, 'on'],
-      ['b', 'pin %n on?', 'digitalRead', 1],
+      ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 3, 'on'],
+      ['b', 'pin %n on?', 'digitalRead', 3],
       ['-'],
-      ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 1, '>', 50],
+      ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 0, '>', 50],
       ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
     //  ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
@@ -962,7 +963,8 @@
       leds: ['led A', 'led B', 'led C', 'led D'],
       outputs: ['on', 'off'],
       ops: ['>', '=', '<'],
-      servos: ['servo A', 'servo B', 'servo C', 'servo D']
+      servos: ['servo A', 'servo B', 'servo C', 'servo D'],
+      digital_outputs: [11, 13] // INCLUDING THESE
     },
     de: {
       buttons: ['Taste A', 'Taste B', 'Taste C', 'Taste D'],
