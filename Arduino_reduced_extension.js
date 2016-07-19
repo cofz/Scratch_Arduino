@@ -581,7 +581,7 @@
       ['-'],
     //  ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
-   /* de: [
+    de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
       [' ', 'Verbinde %m.hwOut mit Pin %n', 'connectHW', 'LED A', 3],
       [' ', 'Verbinde %m.hwIn mit Analog %n', 'connectHW', 'Drehknopf', 0],
@@ -957,7 +957,7 @@
       ['r', '讀取類比 %n', 'analogRead', 0],
       ['-'],
       ['r', '對應 %n 由 %n %n 為 %n %n', 'mapValues', 50, 0, 100, -240, 240]
-    ] */
+    ] 
   };
 
   var menus = {
@@ -976,7 +976,7 @@
       analog_inputs: ANALOGINPUTS // INCLUDING THESE
       
     },
-  /*  de: {
+   de: {
       buttons: ['Taste A', 'Taste B', 'Taste C', 'Taste D'],
       btnStates: ['gedrückt', 'losgelassen'],
       hwIn: ['Drehknopf', 'Lichtsensor', 'Temperatursensor'],
@@ -1105,7 +1105,7 @@
       outputs: ['開', '關'],
       ops: ['>', '=', '<'],
       servos: ['伺服馬達 A', '伺服馬達 B', '伺服馬達 C', '伺服馬達 D']
-    } */
+    } 
   };
 
   var descriptor = {
