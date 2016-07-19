@@ -49,9 +49,9 @@
   var LOW = 0,
     HIGH = 1;
     
-  var DIGITALOUTPUTS = [11, 13], // INCLUDING THESE
-    ANALOGOUTPUTS,[5, 6, 9], // INCLUDING THESE
-    DIGITALINPUTS,[3], // INCLUDING THESE
+  var DIGITALOUTPUTS = [11, 13]; // INCLUDING THESE
+    ANALOGOUTPUTS,[5, 6, 9]; // INCLUDING THESE
+    DIGITALINPUTS,[3]; // INCLUDING THESE
     ANALOGINPUTS, [0, 1, 2, 3]; // INCLUDING THESE
 
   var MAX_DATA_BYTES = 4096;
@@ -975,7 +975,7 @@
       digital_inputs: DIGITALINPUTS, // INCLUDING THESE
       analog_inputs: ANALOGINPUTS // INCLUDING THESE
       
-    }//,
+    },
   /*  de: {
       buttons: ['Taste A', 'Taste B', 'Taste C', 'Taste D'],
       btnStates: ['gedrückt', 'losgelassen'],
