@@ -564,15 +564,15 @@
     //  ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
       ['-'], 
       //[' ', 'set pin %n %m.outputs', 'digitalWrite', 13, 'on'],
-      [' ', 'set output digital %m.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
+      [' ', 'set output digital %d.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
       ['-'], // including space
-      [' ', 'set output analog %m.analog_outputs to %n%', 'analogWrite', 5, 100], //changing
+      [' ', 'set output analog %d.analog_outputs to %n%', 'analogWrite', 5, 100], //changing
       ['-'],
-      ['h', 'when input digital %m.digital_inputs is %m.outputs', 'whenDigitalRead', 3, 'on'], //changing
-      ['b', 'input digital %m.digital_inputs on?', 'digitalRead', 3], //changing
+      ['h', 'when input digital %d.digital_inputs is %m.outputs', 'whenDigitalRead', 3, 'on'], //changing
+      ['b', 'input digital %d.digital_inputs on?', 'digitalRead', 3], //changing
       ['-'],
-      ['h', 'when input analog %m.analog_inputs %m.ops %n%', 'whenAnalogRead', 0, '>', 50], //changing
-      ['r', 'read input analog %m.analog_inputs', 'analogRead', 0], //changing
+      ['h', 'when input analog %d.analog_inputs %m.ops %n%', 'whenAnalogRead', 0, '>', 50], //changing
+      ['r', 'read input analog %d.analog_inputs', 'analogRead', 0], //changing
       ['-'],
     //  ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
     ],
