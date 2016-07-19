@@ -49,10 +49,10 @@
   var LOW = 0,
     HIGH = 1;
     
-//  var DIGITALOUTPUTS = [11, 13]; // INCLUDING THESE
-//    ANALOGOUTPUTS,[5, 6, 9]; // INCLUDING THESE
-//    DIGITALINPUTS,[3]; // INCLUDING THESE
-//    ANALOGINPUTS, [0, 1, 2, 3]; // INCLUDING THESE
+  var DIGITALOUTPUTS = [11, 13]; // INCLUDING THESE
+    ANALOGOUTPUTS,[5, 6, 9]; // INCLUDING THESE
+    DIGITALINPUTS,[3]; // INCLUDING THESE
+    ANALOGINPUTS, [0, 1, 2, 3]; // INCLUDING THESE
 
   var MAX_DATA_BYTES = 4096;
   var MAX_PINS = 128;
@@ -970,10 +970,10 @@
       outputs: ['on', 'off'],
       ops: ['>', '=', '<'],
       servos: ['servo A', 'servo B', 'servo C', 'servo D'],
-      digital_outputs: [13, 11], // INCLUDING THESE
-      analog_outputs: [5, 6], // INCLUDING THESE
-      digital_inputs: [3], // INCLUDING THESE
-      analog_inputs: [0, 1] // INCLUDING THESE
+      digital_outputs: DIGITALOUTPUTS, // INCLUDING THESE
+      analog_outputs: ANALOGOUTPUTS, // INCLUDING THESE
+      digital_inputs: DIGITALINPUTS, // INCLUDING THESE
+      analog_inputs: ANALOGINPUTS// INCLUDING THESE
       
     },
    de: {
