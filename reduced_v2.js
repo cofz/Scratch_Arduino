@@ -1,6 +1,4 @@
 /*
-* Reduced version of Arduino Experimental Extension for Scratch
-*
  *This program is free software: you can redistribute it and/or modify
  *it under the terms of the GNU General Public License as published by
  *the Free Software Foundation, either version 3 of the License, or
@@ -48,11 +46,6 @@
 
   var LOW = 0,
     HIGH = 1;
-    
-  var DIGITALOUTPUTS = [11, 13]; // INCLUDING THESE
-    ANALOGOUTPUTS,[5, 6, 9]; // INCLUDING THESE
-    DIGITALINPUTS,[3]; // INCLUDING THESE
-    ANALOGINPUTS, [0, 1, 2, 3]; // INCLUDING THESE
 
   var MAX_DATA_BYTES = 4096;
   var MAX_PINS = 128;
@@ -567,20 +560,18 @@
     //  ['-'],
     //  ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
     //  ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
-      ['-'], 
-      //[' ', 'set pin %n %m.outputs', 'digitalWrite', 13, 'on'],
-      [' ', 'set output digital %d.digital_outputs %m.outputs', 'digitalWrite', 13, 'on'], //changing pin %n for %m.
-      ['-'], // including space
-      [' ', 'set output analog %d.analog_outputs to %n%', 'analogWrite', 5, 100], //changing
+    //  ['-'],
+      [' ', 'set pin %n %m.outputs', 'digitalWrite', 13, 'on'],
+      [' ', 'set pin %n to %n%', 'analogWrite', 5, 100],
       ['-'],
-      ['h', 'when input digital %d.digital_inputs is %m.outputs', 'whenDigitalRead', 3, 'on'], //changing
-      ['b', 'input digital %d.digital_inputs on?', 'digitalRead', 3], //changing
+      ['h', 'when pin %n is %m.outputs', 'whenDigitalRead', 3, 'on'],
+      ['b', 'pin %n on?', 'digitalRead', 1],
       ['-'],
-      ['h', 'when input analog %d.analog_inputs %m.ops %n%', 'whenAnalogRead', 0, '>', 50], //changing
-      ['r', 'read input analog %d.analog_inputs', 'analogRead', 0], //changing
+      ['h', 'when analog %n %m.ops %n%', 'whenAnalogRead', 0, '>', 50],
+      ['r', 'read analog %n', 'analogRead', 0],
       ['-'],
     //  ['r', 'map %n from %n %n to %n %n', 'mapValues', 50, 0, 100, -240, 240]
-    ],
+    ]/*,
     de: [
       ['h', 'Wenn Arduino verbunden ist', 'whenConnected'],
       [' ', 'Verbinde %m.hwOut mit Pin %n', 'connectHW', 'LED A', 3],
@@ -957,7 +948,7 @@
       ['r', '讀取類比 %n', 'analogRead', 0],
       ['-'],
       ['r', '對應 %n 由 %n %n 為 %n %n', 'mapValues', 50, 0, 100, -240, 240]
-    ] 
+    ]*/
   };
 
   var menus = {
@@ -969,14 +960,9 @@
       leds: ['led A', 'led B', 'led C', 'led D'],
       outputs: ['on', 'off'],
       ops: ['>', '=', '<'],
-      servos: ['servo A', 'servo B', 'servo C', 'servo D'],
-      digital_outputs: DIGITALOUTPUTS, // INCLUDING THESE
-      analog_outputs: ANALOGOUTPUTS, // INCLUDING THESE
-      digital_inputs: DIGITALINPUTS, // INCLUDING THESE
-      analog_inputs: ANALOGINPUTS// INCLUDING THESE
-      
-    },
-   de: {
+      servos: ['servo A', 'servo B', 'servo C', 'servo D']
+    }/*,
+    de: {
       buttons: ['Taste A', 'Taste B', 'Taste C', 'Taste D'],
       btnStates: ['gedrückt', 'losgelassen'],
       hwIn: ['Drehknopf', 'Lichtsensor', 'Temperatursensor'],
@@ -1105,7 +1091,7 @@
       outputs: ['開', '關'],
       ops: ['>', '=', '<'],
       servos: ['伺服馬達 A', '伺服馬達 B', '伺服馬達 C', '伺服馬達 D']
-    } 
+    } */
   };
 
   var descriptor = {
